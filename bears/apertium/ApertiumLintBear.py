@@ -11,7 +11,7 @@ from coalib.results.RESULT_SEVERITY import RESULT_SEVERITY
                      r'(?P<origin>[^\n]+))\n[^:\n]+: (?P<line>\d+)',
         config_suffix='.json',
         severity_map={'Warning': RESULT_SEVERITY.MAJOR})
-class ApertiumLintBear:  # pragma nt: no cover
+class ApertiumLintBear:
     """
     `Apertium lint` is a python module that lints out irregular yet
     acceptable constructs that may creep into files involved in the
@@ -26,7 +26,7 @@ class ApertiumLintBear:  # pragma nt: no cover
     """
     LANGUAGES = {'Apertium'}
     REQUIREMENTS = {PipRequirement('apertium-lint', '0.29'),
-                    PipRequirement('lxml', '==3.6.0')}
+                    PipRequirement('lxml', '>=1.0')}
     AUTHORS = {'The coala developers'}
     AUTHORS_EMAILS = {'coala-devel@googlegroups.com'}
     LICENSE = 'AGPL-3.0'

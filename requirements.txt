@@ -1,6 +1,8 @@
-# NOTE: This file is parsed by .ci/generate_bear_requirements.py
-# Edit coala_dependency in coala-build.yaml
+# NOTE: This file is parsed by .ci/generate_bear_metadata.py
+# Edit coala_dependency in coala-build.yaml<<<<<<< HEAD
 git+https://github.com/akshatkarani/coala@nextgen#egg=coala
+git+https://gitlab.com/frextrite/package_manager@patch_remotes#egg=dependency_management
+
 # Dependencies inherited from coala
 # coala_utils
 # dependency_management

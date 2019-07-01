@@ -11,7 +11,7 @@ from dependency_management.requirements.PipRequirement import PipRequirement
         output_regex=r'(?P<line>\d+):(?P<column>\d+)(?:\s|\u2713)*'
                      r'(?P<severity>error|warning)\s+(?P<message>.+?)'
                      r'(?:  .*|\n|$)')
-class TextLintBear:  # pragma nt: no cover
+class TextLintBear:
     """
     The pluggable linting tool for text and Markdown. It is similar to ESLint,
     but covers natural language instead.
@@ -19,7 +19,7 @@ class TextLintBear:  # pragma nt: no cover
 
     LANGUAGES = {'HTML', 'Markdown', 'reStructuredText'}
     REQUIREMENTS = {NpmRequirement('textlint', '7.3.0'),
-                    NpmRequirement('textlint-plugin-asciidoc-loose', '1.0.1'),
+                    NpmRequirement('textlint-plugin-asciidoctor', '1.0.3'),
                     NpmRequirement('textlint-plugin-html', '0.1.5'),
                     NpmRequirement('textlint-plugin-review', '0.3.3'),
                     NpmRequirement('textlint-plugin-rst', '0.1.1'),
@@ -227,7 +227,7 @@ class TextLintBear:  # pragma nt: no cover
 
             parent_config = {
                 'rules': options,
-                'plugins': ['asciidoc-loose', 'html', 'review', 'rst']
+                'plugins': ['asciidoctor', 'html', 'review', 'rst']
             }
 
             return json.dumps(parent_config)
